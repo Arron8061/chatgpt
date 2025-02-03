@@ -1,4 +1,5 @@
 import AppContextProvider from "@/components/AppContext";
+import EventBusContextProvider from "@/components/EventBusContext";
 import "./globals.css";
 import type { Metadata } from "next";
 
@@ -15,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <AppContextProvider>{children}</AppContextProvider>
+        <AppContextProvider>
+          <EventBusContextProvider>{children}</EventBusContextProvider>
+        </AppContextProvider>
       </body>
     </html>
   );

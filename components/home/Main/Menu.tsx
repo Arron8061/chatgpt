@@ -1,12 +1,13 @@
 "use client";
 import { useAppContext } from "@/components/AppContext";
 import Button from "@/components/common/Button";
+import { ActionType } from "@/reducers/AppReducer";
 import { LuPanelLeft } from "react-icons/lu";
 
 export default function Menu() {
   const {
     state: { displayNavigation },
-    setState,
+    dispach,
   } = useAppContext();
   return (
     <Button
@@ -14,8 +15,10 @@ export default function Menu() {
       className={`${displayNavigation ? "hidden" : ""} fixed left-2 top-2`}
       icon={LuPanelLeft}
       onClick={() => {
-        setState((v) => {
-          return { ...v, displayNavigation: true };
+        dispach({
+          type: ActionType.UPDATE,
+          field: "displayNavigation",
+          value: true,
         });
       }}
     />

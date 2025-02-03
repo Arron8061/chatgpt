@@ -1,5 +1,7 @@
 "use client";
 
+import { Action, initState, reducer, State } from "@/reducers/AppReducer";
+
 import {
   Dispatch,
   ReactNode,
@@ -7,17 +9,18 @@ import {
   createContext,
   useContext,
   useMemo,
+  useReducer,
   useState,
 } from "react";
 
-type State = {
-  displayNavigation: boolean;
-  themeMode: "dark" | "light";
-};
+// type State = {
+//   displayNavigation: boolean;
+//   themeMode: "dark" | "light";
+// };
 
 type AppContextProps = {
   state: State;
-  setState: Dispatch<SetStateAction<State>>;
+  dispach: Dispatch<Action>;
 };
 const AppContext = createContext<AppContextProps>(null!);
 
@@ -30,13 +33,15 @@ export default function AppContextProvider({
 }: {
   children: ReactNode;
 }) {
-  const [state, setState] = useState<State>({
-    displayNavigation: true,
-    themeMode: "light",
-  });
+  const [state, dispach] = useReducer(reducer, initState);
+
+  // const [state, setState] = useState<State>({
+  //   displayNavigation: true,
+  //   themeMode: "light",
+  // });
   const contextValue = useMemo(() => {
-    return { state, setState };
-  }, [state, setState]);
+    return { state, dispach };
+  }, [state, dispach]);
   return (
     <AppContext.Provider value={contextValue}>{children}</AppContext.Provider>
   );
