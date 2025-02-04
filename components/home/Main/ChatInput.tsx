@@ -7,7 +7,10 @@ import { useEffect, useRef, useState } from "react";
 import { Message, MessageRequestBody } from "@/types/chat";
 import { useAppContext } from "@/components/AppContext";
 import { ActionType } from "@/reducers/AppReducer";
-import { useEventBusContext } from "@/components/EventBusContext";
+import {
+  useEventBusContext,
+  EventListener,
+} from "@/components/EventBusContext";
 
 export default function ChatInput() {
   const [messageText, setMessageText] = useState("");
@@ -17,7 +20,15 @@ export default function ChatInput() {
     state: { messageList, currentModel, streamingId, selectedChat },
     dispach,
   } = useAppContext();
-  const { publish } = useEventBusContext();
+  const { publish, subscribe, unsubscribe } = useEventBusContext();
+
+  useEffect(() => {
+    const callback: EventListener = (data) => {
+      send(data);
+    };
+    subscribe("createNewChat", callback);
+    return () => unsubscribe("createNewChat", callback);
+  }, []);
 
   useEffect(() => {
     if (chatIdRef.current === selectedChat?.id) {
@@ -67,17 +78,24 @@ export default function ChatInput() {
     return code === 0;
   }
 
-  async function send() {
+  async function send(content: string) {
     const message = await createOrUpdateMessage({
       id: "",
       role: "user",
-      content: messageText,
+      content,
       chatId: chatIdRef.current,
     });
     dispach({ type: ActionType.ADD_MESSAGE, message });
     const messages = messageList.concat([message]);
     dosend(messages);
+
+    // if (!selectedChat?.title || selectedChat?.title === "新对话") {
+    //   updateChatTitle(messages);
+    // }
   }
+  // async function updateChatTitle(messages: Message[]) {
+  //   console.log("GPT" + messages);
+  // }
 
   async function resend() {
     const messages = [...messageList];
@@ -208,7 +226,9 @@ export default function ChatInput() {
             icon={FiSend}
             disabled={messageText.trim() === "" || streamingId !== ""}
             variant="primary"
-            onClick={send}
+            onClick={() => {
+              send(messageText);
+            }}
           ></Button>
         </div>
 
