@@ -89,13 +89,74 @@ export default function ChatInput() {
     const messages = messageList.concat([message]);
     dosend(messages);
 
-    // if (!selectedChat?.title || selectedChat?.title === "新对话") {
-    //   updateChatTitle(messages);
-    // }
+    if (!selectedChat?.title || selectedChat?.title === "新对话") {
+      updateChatTitle(messages);
+    }
   }
-  // async function updateChatTitle(messages: Message[]) {
-  //   console.log("GPT" + messages);
-  // }
+  async function updateChatTitle(messages: Message[]) {
+    const messsage: Message = {
+      id: "",
+      role: "user",
+      content:
+        "使用 5 到 10 个字直接返回这句话的简要主题，不要解释、不要标点、不要语气词、不要多余文本，如果没有主题，请直接返回‘新对话’",
+      chatId: chatIdRef.current,
+    };
+    const chatId = chatIdRef.current;
+    const body: MessageRequestBody = {
+      messages: [...messages, messsage],
+      model: currentModel,
+    };
+    const controller = new AbortController();
+
+    console.log("发送请求:", body);
+
+    let response = await fetch("/api/chat", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+      signal: controller.signal,
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.error("API错误:", {
+        status: response.status,
+        error: errorData,
+      });
+      throw new Error(errorData.error || "请求失败");
+    }
+    if (!response.body) {
+      console.log("body error");
+      return;
+    }
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder();
+    let done = false;
+    let content = "";
+    while (!done) {
+      const result = await reader.read();
+      done = result.done;
+      const chunk = decoder.decode(result.value);
+      content += chunk;
+    }
+    response = await fetch("/api/chat/update", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ id: chatId, title: content }),
+    });
+    if (!response.ok) {
+      console.log(response.statusText);
+      return;
+    }
+    const { code } = await response.json();
+    if (code === 0) {
+      publish("fetchChatList");
+    }
+  }
 
   async function resend() {
     const messages = [...messageList];
