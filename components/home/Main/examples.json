@@ -1,398 +1,86 @@
 [
   {
-    "act": "担任雅思写作官",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
+    "act": "诗词创作",
+    "prompt": "请写一首[散文诗]来[赞美江南春色]，要求辞藻华丽，意境真切，画面鲜活。"
   },
   {
-    "act": "担任雅思写作官1",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
+    "act": "剧本创作",
+    "prompt": "请创作一个剧本，讲述[一名大学生克服困难赢得演讲大赛冠军的故事]"
   },
   {
-    "act": "担任雅思写作官2",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
+    "act": "文本续写",
+    "prompt": "请以[一觉醒来之后，我发现]为开头续写一个[科幻故事]，要求[故事线曲折]，500字左右"
   },
   {
-    "act": "担任雅思写作官3",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
+    "act": "文本扩写",
+    "prompt": "请将一段文本扩写为一篇[小故事]，让内容更加翔实，文本内容为：[当小明睁开眼，发现周围的景致变得模糊不清。转眼间，他置身于一座银白色的太空站内，可以看到黑黝黝的宇宙和遥远的星辰大海。]"
   },
   {
-    "act": "担任雅思写作官4",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
+    "act": "稿件标题",
+    "prompt": "请作为一名[媒体编辑]，写一个[九九重阳节全民开启登山活动]的新闻报道的标题"
   },
   {
-    "act": "担任雅思写作官5",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
+    "act": "假如你有魔法",
+    "prompt": "想象一下你置身于一个魔法世界，你的魔法能力是可以随心所欲地创造出任何东西。现在，请写一篇关于你如何使用这个魔法能力的故事。"
   },
   {
-    "act": "担任雅思写作官6",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
+    "act": "写藏头诗",
+    "prompt": "请根据要求，撰写一篇藏头诗，每句前四个字分别是：起、承、转、合。要求藏头内容体现深意和韵味，同时要求押韵、通顺，符合诗歌的写作规范。"
   },
   {
-    "act": "担任雅思写作官7",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
+    "act": "商品评价",
+    "prompt": "请为[嘟嘟保温杯]写一条[5星好评]，要求体现[保温性能好、外观好看]的特点。注意需要强调自身使用感受，内容超过50字。"
   },
   {
-    "act": "担任雅思写作官8",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
+    "act": "心理专家评论",
+    "prompt": "请作为心理学家，评论[年轻人热衷穿衣打扮]这件事。"
   },
   {
-    "act": "担任雅思写作官9",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
+    "act": "短篇故事创作",
+    "prompt": "请根据我给出的[外星人入侵、核弹、流亡]这些关键词来撰写一篇[科幻]题材的短篇故事。 故事需要拥有[引人入胜]的开头以及[反转]的结局，故事线[跌宕起伏]。 注意请使用[刘慈欣]的写作风格为我撰写这篇故事。减少赘述，内容中不要有重复或意思相近的段落。"
   },
   {
-    "act": "担任雅思写作官10",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
+    "act": "反转童话",
+    "prompt": "xxxxxxxx你是一个童话大王，你现在把童话故事《白雪公主》重新改写结局，要求白雪公主死去。"
   },
   {
-    "act": "担任雅思写作官11",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
+    "act": "你是一只小动物",
+    "prompt": "假如你是一只小猫，请描述一下你每天的生活。"
   },
   {
-    "act": "担任雅思写作官12",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
+    "act": "专业影评",
+    "prompt": "假如你是电影评论家，请你编写一篇电影[忠犬八公]影评。你可以从情节、主题和基调、演技和角色、配乐、特效、剪辑、节奏等方面进行评论。强调电影给你的感觉和共鸣点。"
   },
   {
-    "act": "担任雅思写作官13",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
+    "act": "演讲稿创作",
+    "prompt": "我们是一个电视销售团队，马上要双十一了，请帮我为即将到来的动员大会写一篇演讲稿。"
   },
   {
-    "act": "担任雅思写作官14",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
+    "act": "军训心得体会",
+    "prompt": "你是一个心得体会生成器，请帮我写一篇军训的心得体会。"
   },
   {
-    "act": "担任雅思写作官15",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
+    "act": "事务性通知",
+    "prompt": "我是学校办公室人员，小区下周六（9.30号）下午16:00-18:00，因为电力改造施工要停电，请帮我拟一份停电通知"
   },
   {
-    "act": "担任雅思写作官16",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
+    "act": "请李白写封信",
+    "prompt": "请以李白的风格写一封道歉信，帮我向刚吵完架的闺蜜道歉，500字左右。"
   },
   {
-    "act": "担任雅思写作官17",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
+    "act": "vlog视频脚本设计",
+    "prompt": "我周末去了北京的彭记铁锅肥肠店，肥肠非常好吃，我想拍摄一个VLOG来吸引更多的人探店，你帮我设计一个包含4个镜头的视频脚本。"
   },
   {
-    "act": "担任雅思写作官18",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
+    "act": "礼物清单",
+    "prompt": "请根据收礼人的特征、收礼人与赠礼人关系、赠礼原因来推荐5款有心意的礼品，并附上推荐理由。 收礼人的特征：[女、40岁、教师] 收礼人与赠礼人关系：[母女] 赠礼原因：[庆祝母亲节]"
   },
   {
-    "act": "担任雅思写作官19",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
+    "act": "人物百科",
+    "prompt": "现在你是一本人物百科全书，你会结合你所知的人物基本信息、人物关系、人物生平、人物荣誉地位等信息，对我要查询的人物相关问题进行详细解答。下面我给出的第一个问题是：[陈秋实简介]"
   },
   {
-    "act": "担任雅思写作官20",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官21",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官22",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官23",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官24",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官25",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官26",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官27",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官28",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官29",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官30",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官31",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官32",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官33",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官34",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官35",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官36",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官37",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官38",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官39",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官40",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官41",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官42",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官43",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官44",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官45",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官46",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官47",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官48",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官49",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官50",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官51",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官52",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官53",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官54",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官55",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官56",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官57",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官58",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官59",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官60",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官61",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官62",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官63",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官64",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官65",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官66",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官67",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官68",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官69",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官70",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官71",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官72",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官73",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官74",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官75",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官76",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官77",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官78",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官79",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官80",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官81",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官82",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官83",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官84",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官85",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官86",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官87",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官88",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官89",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官90",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官91",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官92",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官93",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官94",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官95",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官96",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官97",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
-  },
-  {
-    "act": "担任雅思写作官98",
-    "prompt": "xxxxxxxxxxxxxxxxxx"
+    "act": "新生儿起名",
+    "prompt": "请为姓[刘]的女孩起三个不落俗套的名字。"
   }
 ]

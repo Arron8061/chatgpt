@@ -120,66 +120,81 @@ export default function ChatInput() {
   }
 
   async function dosend(messages: Message[]) {
-    stopRef.current = false;
-    const body: MessageRequestBody = { messages, model: currentModel };
+    try {
+      stopRef.current = false;
+      const body: MessageRequestBody = { messages, model: currentModel };
+      const controller = new AbortController();
 
-    // setMessageText("");
+      console.log("发送请求:", body);
 
-    const controller = new AbortController();
-    const response = await fetch("/api/chat", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      signal: controller.signal,
-      body: JSON.stringify(body),
-    });
-    if (!response.ok) {
-      console.log(response.statusText);
-      return;
-    }
-    if (!response.body) {
-      console.log("body error");
-      return;
-    }
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(body),
+        signal: controller.signal,
+      });
 
-    const responseMessage: Message = await createOrUpdateMessage({
-      id: "",
-      role: "assistant",
-      content: "",
-      chatId: chatIdRef.current,
-    });
-    dispach({ type: ActionType.ADD_MESSAGE, message: responseMessage });
-    dispach({
-      type: ActionType.UPDATE,
-      field: "streamingId",
-      value: responseMessage.id,
-    });
-    const reader = response.body.getReader();
-    const decoder = new TextDecoder();
-    let done = false;
-    let content = "";
-    while (!done) {
-      if (stopRef.current) {
-        controller.abort();
-        break;
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.error("API错误:", {
+          status: response.status,
+          error: errorData,
+        });
+        throw new Error(errorData.error || "请求失败");
       }
-      const result = await reader.read();
-      done = result.done;
-      const chunk = decoder.decode(result.value);
-      content += chunk;
+      if (!response.body) {
+        console.log("body error");
+        return;
+      }
+
+      const responseMessage: Message = await createOrUpdateMessage({
+        id: "",
+        role: "assistant",
+        content: "",
+        chatId: chatIdRef.current,
+      });
+      dispach({ type: ActionType.ADD_MESSAGE, message: responseMessage });
       dispach({
-        type: ActionType.UPDATE_MESSAGE,
-        message: { ...responseMessage, content },
+        type: ActionType.UPDATE,
+        field: "streamingId",
+        value: responseMessage.id,
+      });
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let done = false;
+      let content = "";
+      while (!done) {
+        if (stopRef.current) {
+          controller.abort();
+          break;
+        }
+        const result = await reader.read();
+        done = result.done;
+        const chunk = decoder.decode(result.value);
+        content += chunk;
+        dispach({
+          type: ActionType.UPDATE_MESSAGE,
+          message: { ...responseMessage, content },
+        });
+      }
+      createOrUpdateMessage({ ...responseMessage, content });
+      dispach({
+        type: ActionType.UPDATE,
+        field: "streamingId",
+        value: "",
+      });
+      setMessageText("");
+    } catch (error) {
+      console.error("请求错误:", error);
+      // 可以在这里添加错误提示UI
+      dispach({
+        type: ActionType.UPDATE,
+        field: "streamingId",
+        value: "",
       });
     }
-    createOrUpdateMessage({ ...responseMessage, content });
-    dispach({
-      type: ActionType.UPDATE,
-      field: "streamingId",
-      value: "",
-    });
-    setMessageText("");
   }
   return (
     <div className="absolute bottom-0 inset-x-0 bg-gradient-to-b from-[rgba(255,255,255,0)] from-[13.94%] to-[#fff] to-[54.73%] pt-10 dark:from-[rgba(53,55,64,0)] dark:to-[#353740] dark:to-[58.85%]">

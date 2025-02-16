@@ -5,12 +5,12 @@ import { PiLightningFill, PiShootingStarFill } from "react-icons/pi";
 export default function ModelSelect() {
   const models = [
     {
-      id: "gpt-35-turbo",
+      id: "gpt-3.5-turbo",
       name: "GPT-3.5",
       icon: PiLightningFill,
     },
     {
-      id: "gpt-4-turbo",
+      id: "gpt-4o-mini",
       name: "GPT-4",
       icon: PiShootingStarFill,
     },
