@@ -24,3 +24,12 @@ model Message {
 
  
 }
+
+model User {
+  id         String   @id @default(uuid())
+  name       String
+  role       String
+  password   String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
