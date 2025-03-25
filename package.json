@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@azure/openai": "^1.0.0-alpha.20240514.1",
-    "@prisma/client": "^6.5.0",
+    "@prisma/client": "^5.2.0",
     "@types/node": "22.10.5",
     "@types/react": "19.0.5",
     "@types/react-dom": "19.0.3",
